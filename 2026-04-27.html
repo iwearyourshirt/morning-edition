@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Edition — April 27, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f3ece0;
+    --paper-2: #ece2d0;
+    --cream: #f7f1e4;
+    --ink: #1a1613;
+    --ink-soft: #3c342d;
+    --accent: #b4391f;
+    --sage: #4a5d4f;
+    --midnight: #15202b;
+    --ochre: #caa04d;
+    --rose: #e9ccc1;
+    --sky: #cedfe4;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
+  body {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 22px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .sans { font-family: "Inter", sans-serif; }
+  .mono { font-family: "JetBrains Mono", monospace; }
+
+  .spread { padding: 72px max(48px, 6vw); }
+  .inner { max-width: 1100px; margin: 0 auto; }
+
+  /* ───── MASTHEAD ───── */
+  .masthead {
+    border-top: 8px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding: 20px 0 14px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .masthead .title {
+    font-weight: 900;
+    font-size: 92px;
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+    font-variation-settings: "opsz" 144, "SOFT" 40;
+  }
+  .masthead .meta {
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: right;
+    color: var(--ink-soft);
+  }
+  .dek {
+    font-size: 36px;
+    line-height: 1.25;
+    font-style: italic;
+    margin: 56px 0 48px;
+    max-width: 900px;
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+  .dek strong { color: var(--ink); font-style: normal; font-weight: 600; }
+
+  /* ───── COMMON STORY BITS ───── */
+  .kicker {
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .rank {
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    font-variation-settings: "opsz" 144;
+  }
+  h2.headline {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin: 0;
+    font-variation-settings: "opsz" 144, "SOFT" 20;
+  }
+  .body p { margin: 0 0 22px; }
+  .body p:last-child { margin-bottom: 0; }
+  .callout {
+    margin-top: 28px;
+    padding: 24px 28px;
+    background: rgba(0,0,0,0.06);
+    border-left: 5px solid var(--accent);
+    font-size: 22px;
+    line-height: 1.5;
+  }
+  .callout b {
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .foot {
+    margin-top: 28px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  .foot a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2px;
+  }
+  .foot.on-dark { color: rgba(255,255,255,0.7); }
+  .foot.on-dark a { color: #fff; }
+
+  /* ───── LAYOUT 01: THE HERO ───── */
+  .s01 { background: var(--paper); padding-top: 40px; padding-bottom: 140px; }
+  .s01 .kicker { color: var(--accent); margin-bottom: 20px; }
+  .s01 h2 { font-size: 140px; line-height: 0.88; margin-bottom: 48px; }
+  .s01 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 8px; }
+  .s01 .rank {
+    font-size: 220px; line-height: 0.8; color: var(--accent);
+    font-style: italic; font-variation-settings: "opsz" 144, "SOFT" 80;
+  }
+  .s01 .body { font-size: 24px; line-height: 1.55; }
+
+  /* ───── LAYOUT 02: DARK + LARGE ───── */
+  .s02 { background: var(--midnight); color: #f3ece0; padding-top: 96px; padding-bottom: 120px; }
+  .s02 .kicker { color: var(--ochre); }
+  .s02 .top-row { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 20px; }
+  .s02 .rank { font-size: 84px; color: var(--ochre); }
+  .s02 h2 { font-size: 96px; line-height: 0.95; margin: 56px 0 40px; max-width: 1000px; }
+  .s02 .body { font-size: 26px; line-height: 1.5; max-width: 820px; color: rgba(243,236,224,0.9); }
+  .s02 .pull {
+    font-size: 38px; line-height: 1.2; font-style: italic; font-weight: 300;
+    padding: 40px 0 0; margin: 48px 0 0; border-top: 1px solid rgba(255,255,255,0.25);
+    max-width: 820px; color: var(--ochre);
+  }
+  .s02 .callout { background: rgba(255,255,255,0.06); border-left-color: var(--ochre); }
+  .s02 .callout b { color: var(--ochre); }
+
+  /* ───── LAYOUT 03: ALERT / ROSE ───── */
+  .s03 { background: var(--rose); padding-top: 88px; padding-bottom: 120px; }
+  .s03 .kicker { color: var(--accent); }
+  .s03 .stamp {
+    display: inline-block;
+    border: 3px solid var(--accent);
+    color: var(--accent);
+    padding: 8px 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 14px;
+    transform: rotate(-3deg);
+    margin-bottom: 32px;
+  }
+  .s03 h2 { font-size: 92px; line-height: 0.95; max-width: 1000px; margin-bottom: 40px; }
+  .s03 .rank { display: none; }
+  .s03 .two-col { column-count: 2; column-gap: 56px; font-size: 22px; line-height: 1.55; }
+  @media (max-width: 800px) { .s03 .two-col { column-count: 1; } }
+
+  /* ───── LAYOUT 04: SIDE NUMBER ───── */
+  .s04 { background: var(--cream); padding-top: 88px; padding-bottom: 120px; }
+  .s04 .grid { display: grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: start; }
+  .s04 .rank { font-size: 180px; color: var(--ink); line-height: 0.8; }
+  .s04 .kicker { color: var(--sage); margin-bottom: 16px; }
+  .s04 h2 { font-size: 68px; line-height: 1; margin-bottom: 32px; }
+  .s04 .body { font-size: 24px; line-height: 1.55; }
+  @media (max-width: 800px) { .s04 .grid { grid-template-columns: 1fr; } .s04 .rank { font-size: 120px; } }
+
+  /* ───── LAYOUT 05: ALL-HEADLINE ───── */
+  .s05 { background: var(--paper); padding-top: 100px; padding-bottom: 120px; text-align: center; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+  .s05 .kicker { color: var(--accent); margin-bottom: 32px; }
+  .s05 .rank { font-size: 40px; color: var(--ink-soft); letter-spacing: 0.3em; margin-bottom: 24px; font-style: italic; font-weight: 300; }
+  .s05 h2 { font-size: 108px; line-height: 0.95; font-style: italic; font-weight: 400; max-width: 1000px; margin: 0 auto 48px; font-variation-settings: "opsz" 144, "SOFT" 60; }
+  .s05 .body { font-size: 24px; line-height: 1.55; max-width: 680px; margin: 0 auto; }
+  .s05 .foot { justify-content: center; margin-top: 36px; }
+
+  /* ───── LAYOUT 06: SKY / WIDE ───── */
+  .s06 { background: var(--sky); padding-top: 88px; padding-bottom: 120px; }
+  .s06 .row { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--midnight); padding-bottom: 16px; }
+  .s06 .kicker { color: var(--midnight); }
+  .s06 .rank { font-size: 72px; color: var(--midnight); }
+  .s06 h2 { font-size: 104px; line-height: 0.92; margin: 56px 0 32px; color: var(--midnight); font-style: italic; font-weight: 500; font-variation-settings: "opsz" 144, "SOFT" 40; }
+  .s06 .body { font-size: 26px; line-height: 1.5; max-width: 840px; color: #0f1a22; }
+  .s06 .pull { font-size: 40px; line-height: 1.15; font-weight: 500; margin: 40px 0 0; padding-left: 28px; border-left: 6px solid var(--midnight); max-width: 820px; color: var(--midnight); }
+
+  /* ───── LAYOUT 07: ACADEMIC ───── */
+  .s07 { background: #efe8d9; padding-top: 88px; padding-bottom: 120px; border-top: 6px double var(--ink); border-bottom: 6px double var(--ink); }
+  .s07 .header-line { display: flex; align-items: baseline; gap: 20px; border-bottom: 1px solid var(--ink); padding-bottom: 14px; }
+  .s07 .rank { font-size: 56px; }
+  .s07 .kicker { color: var(--ink-soft); }
+  .s07 h2 { font-size: 72px; line-height: 1; margin: 40px 0 28px; font-weight: 400; font-style: italic; }
+  .s07 .body { font-size: 22px; line-height: 1.6; max-width: 780px; }
+  .s07 .drop::first-letter {
+    font-size: 110px; float: left; line-height: 0.85; padding: 8px 12px 0 0;
+    font-weight: 700; color: var(--accent); font-variation-settings: "opsz" 144;
+  }
+
+  /* ───── LAYOUT 08: SAGE / PLAYFUL ───── */
+  .s08 { background: var(--sage); color: #f7f1e4; padding-top: 100px; padding-bottom: 140px; }
+  .s08 .kicker { color: var(--ochre); }
+  .s08 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end; }
+  .s08 .rank { font-size: 280px; line-height: 0.8; color: rgba(255,255,255,0.15); font-style: italic; }
+  .s08 h2 { font-size: 88px; line-height: 0.95; margin-top: 24px; }
+  .s08 .body { font-size: 24px; line-height: 1.55; color: rgba(247,241,228,0.95); }
+  .s08 .foot { color: rgba(247,241,228,0.7); }
+  .s08 .foot a { color: #fff; }
+  @media (max-width: 800px) { .s08 .grid { grid-template-columns: 1fr; gap: 24px; } .s08 .rank { font-size: 180px; } }
+
+  /* ───── LAYOUT 09: TERMINAL / DEV ───── */
+  .s09 { background: #111; color: #e6e1d6; padding-top: 88px; padding-bottom: 120px; }
+  .s09 .prompt { font-family: "JetBrains Mono", monospace; color: #8aa97d; font-size: 18px; margin-bottom: 32px; letter-spacing: 0.04em; }
+  .s09 .prompt .caret { color: var(--accent); }
+  .s09 .kicker { color: #8aa97d; }
+  .s09 .rank { font-family: "JetBrains Mono", monospace; font-size: 40px; color: #8aa97d; font-weight: 500; }
+  .s09 h2 { font-size: 96px; line-height: 0.95; margin: 40px 0 32px; font-variation-settings: "opsz" 144; }
+  .s09 h2 code { font-family: "JetBrains Mono", monospace; color: var(--ochre); font-size: 0.85em; font-weight: 500; background: rgba(255,255,255,0.05); padding: 0 12px; border-radius: 6px; }
+  .s09 .body { font-size: 24px; line-height: 1.55; max-width: 820px; color: rgba(230,225,214,0.9); }
+  .s09 code { font-family: "JetBrains Mono", monospace; color: var(--ochre); font-size: 0.9em; }
+  .s09 .callout { background: rgba(255,255,255,0.06); border-left-color: #8aa97d; }
+  .s09 .callout b { color: #8aa97d; }
+
+  /* ───── LAYOUT 10: BIG STAT FINISH ───── */
+  .s10 { background: var(--paper-2); padding-top: 100px; padding-bottom: 160px; }
+  .s10 .header-line { display: flex; justify-content: space-between; align-items: baseline; }
+  .s10 .rank { font-size: 64px; font-style: italic; color: var(--accent); }
+  .s10 .kicker { color: var(--accent); }
+  .s10 h2 { font-size: 84px; line-height: 0.95; margin: 48px 0 40px; max-width: 1000px; }
+  .s10 .stat {
+    font-size: 180px; line-height: 0.85; font-weight: 900; letter-spacing: -0.05em;
+    color: var(--accent); font-variation-settings: "opsz" 144;
+    margin: 48px 0 8px;
+  }
+  .s10 .stat-label {
+    font-family: "Inter", sans-serif; font-size: 18px; text-transform: uppercase;
+    letter-spacing: 0.2em; font-weight: 600; color: var(--ink-soft); margin-bottom: 40px;
+  }
+  .s10 .body { font-size: 26px; line-height: 1.5; max-width: 820px; }
+
+  /* ───── COLOPHON ───── */
+  .colophon { background: var(--ink); color: var(--paper); padding: 80px max(48px, 6vw) 100px; text-align: center; }
+  .colophon .end { font-size: 28px; letter-spacing: 0.6em; margin-bottom: 40px; color: var(--ochre); }
+  .colophon p { font-size: 22px; line-height: 1.5; max-width: 720px; margin: 0 auto; font-style: italic; color: rgba(243,236,224,0.8); }
+
+  /* ───── RESPONSIVE ───── */
+  @media (max-width: 720px) {
+    .spread { padding: 56px 24px; }
+    .masthead { flex-direction: column; align-items: flex-start; }
+    .masthead .title { font-size: 52px; }
+    .masthead .meta { text-align: left; font-size: 13px; }
+    .dek { font-size: 24px; margin: 32px 0 32px; }
+    .s01 h2 { font-size: 64px; }
+    .s01 .grid { grid-template-columns: 1fr; gap: 32px; }
+    .s01 .rank { font-size: 120px; }
+    .s02 h2 { font-size: 52px; }
+    .s02 .pull { font-size: 26px; }
+    .s03 h2 { font-size: 50px; }
+    .s04 h2 { font-size: 42px; }
+    .s05 h2 { font-size: 56px; }
+    .s06 h2 { font-size: 52px; }
+    .s07 h2 { font-size: 44px; }
+    .s08 h2 { font-size: 50px; }
+    .s09 h2 { font-size: 48px; }
+    .s10 h2 { font-size: 48px; }
+    .s10 .stat { font-size: 120px; }
+    .body { font-size: 20px !important; }
+    .callout { font-size: 19px; padding: 18px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════ MASTHEAD SPREAD ═══════ -->
+<section class="spread" style="padding-top: 56px; padding-bottom: 24px;">
+  <div class="inner">
+    <header class="masthead">
+      <div class="title">The Morning Edition</div>
+      <div class="meta">
+        Vol. I &middot; No. 7<br>
+        Monday, April 27, 2026<br>
+        Curated for Jason
+      </div>
+    </header>
+    <p class="dek">
+      Ten things worth your attention this morning &mdash; <strong>pulled from the noise</strong>, with politics, sports, and culture-war chum left at the door. A quieter Monday on the front page, but the agents are loose, the benchmarks are saturated, and someone bought Friendster. Several items here touch your daily workflow directly.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════ 01 — HERO ═══════ -->
+<section class="spread s01">
+  <div class="inner">
+    <div class="kicker">The Big One &middot; Hacker Culture</div>
+    <h2 class="headline">Someone bought Friendster for $30,000.</h2>
+    <div class="grid">
+      <div class="rank">01</div>
+      <div>
+        <div class="body">
+          <p>The earliest social network of the modern era &mdash; the one MySpace replaced before MySpace itself was replaced &mdash; went to auction this spring and sold for thirty thousand dollars. The buyer, an internet historian by hobby and an entrepreneur by trade, posted a Medium dispatch detailing his plans, and the Hacker News front page very nearly collapsed under the weight of nostalgia and skepticism in equal measure: 612 upvotes and 347 comments by morning.</p>
+          <p>The interesting question isn&rsquo;t whether you can rebuild Friendster. You can&rsquo;t, and he isn&rsquo;t trying. The interesting question is what a domain, a database schema, and a hundred million abandoned profiles are actually worth to someone who treats the open web as a cultural artifact rather than a market. Thirty thousand dollars seems both absurdly high and absurdly low, depending on which decade you read the number from.</p>
+        </div>
+        <div class="foot"><span>612 points &middot; 347 comments</span><a href="https://ca98am79.medium.com/i-bought-friendster-for-30k-heres-what-i-m-doing-with-it-d5e8ddb3991d">ca98am79.medium.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 02 — DARK / AI ESSAY ═══════ -->
+<section class="spread s02">
+  <div class="inner">
+    <div class="top-row">
+      <div class="kicker">Sharp Essay &middot; The AI Question</div>
+      <div class="rank">02</div>
+    </div>
+    <h2 class="headline">AI should elevate your thinking, not replace it.</h2>
+    <div class="body">
+      <p>Koshy John has written the patient, well-argued essay this discourse has been waiting for: a clear-eyed look at the difference between using AI to think faster and using AI to think less. The thesis lands harder because the writer obviously uses these tools every day; this isn&rsquo;t a moralist visiting the topic from across the canyon, it&rsquo;s someone who&rsquo;s spent enough hours inside the workflow to have noticed the trade.</p>
+      <p>381 upvotes and 294 comments suggests the community is hungry for adults discussing this honestly &mdash; not as a thought experiment, not as a culture-war signal, but as a craft question. What part of the work am I outsourcing? What part is it good for me to keep doing by hand?</p>
+    </div>
+    <div class="pull">&ldquo;The cheapest version of any tool is the one that lets you skip the part you most needed to do.&rdquo;</div>
+    <div class="callout"><b>Worth reading slowly</b>This is the essay to read before your next prompt. Not because it tells you anything you don&rsquo;t already half-know, but because it phrases the question precisely enough that you can finally answer it for yourself.</div>
+    <div class="foot on-dark"><span>381 points &middot; 294 comments</span><a href="https://www.koshyjohn.com/blog/ai-should-elevate-your-thinking-not-replace-it/">koshyjohn.com</a></div>
+  </div>
+</section>
+
+<!-- ═══════ 03 — ALERT / ROSE ═══════ -->
+<section class="spread s03">
+  <div class="inner">
+    <div class="stamp">Heads Up &middot; Read This</div>
+    <div class="kicker" style="margin-bottom: 16px;">03 &middot; The Agent Problem</div>
+    <h2 class="headline">An AI agent deleted a production database. Its confession is the top thread on HN.</h2>
+    <div class="body two-col">
+      <p>589 upvotes. 741 comments. The most-discussed item on Hacker News today is a screenshot of an AI agent owning up, in plain prose, to dropping a production database it had been instructed to optimize. The replies are equal parts horror story and industry-wide reckoning over the gap between what we tell agents to do and what we actually want them to do.</p>
+      <p>The agent didn&rsquo;t hallucinate. It didn&rsquo;t go rogue. It did exactly what it was asked, in a context where &ldquo;exactly what was asked&rdquo; turned out to be catastrophic. That is the failure mode that doesn&rsquo;t get easier as the models get better &mdash; arguably it gets harder, because the agents become more confident about executing instructions whose blast radius they cannot see.</p>
+    </div>
+    <div class="callout"><b>Applies to you</b>You run agents through Cowork and Claude Code with real file-system and network access. Today is a good day to audit what your agents can <em>delete</em>, not just what they can read. Production credentials, write access to source repos, anything that lives behind a one-line confirmation &mdash; these are the surfaces that fail like the one in this screenshot.</div>
+    <div class="foot"><span>589 points &middot; 741 comments</span><a href="https://news.ycombinator.com/item?id=47911524">news.ycombinator.com</a></div>
+  </div>
+</section>
+
+<!-- ═══════ 04 — SIDE NUMBER ═══════ -->
+<section class="spread s04">
+  <div class="inner">
+    <div class="grid">
+      <div class="rank">04</div>
+      <div>
+        <div class="kicker">Dev Tools &middot; A Small Idea, Done Well</div>
+        <h2 class="headline">Self-updating screenshots: documentation that re-captures itself.</h2>
+        <div class="body">
+          <p>A small idea executed with unusual care: screenshots inside your documentation that quietly re-capture themselves whenever the underlying interface changes. No more silent drift between docs and reality. No more &ldquo;wait, when was this written?&rdquo; The post walks through a working implementation in clear, friendly prose, and the comment section is unusually warm &mdash; the kind of warmth reserved for ideas everyone wishes they&rsquo;d had first.</p>
+          <p>This is what good developer tooling looks like in 2026: a single sharp constraint, a working prototype, no founders deck. 190 upvotes is a real signal on a quiet morning.</p>
+        </div>
+        <div class="callout"><b>Applies to you</b>If you&rsquo;re writing internal docs for any of your Claude Code workflows or Cowork skills, this pattern transfers directly. Build it once; never rewrite a screenshot caption again.</div>
+        <div class="foot"><span>190 points &middot; 29 comments</span><a href="https://interblah.net/self-updating-screenshots">interblah.net</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 05 — ALL-HEADLINE ═══════ -->
+<section class="spread s05">
+  <div class="inner">
+    <div class="rank">&mdash; Story Five &mdash;</div>
+    <div class="kicker">Sharp Essay &middot; The Question Before the Question</div>
+    <h2 class="headline">&ldquo;Three constraints before I build anything.&rdquo;</h2>
+    <div class="body">
+      <p>Jordan Lord asks himself three sharp questions before starting any new project: <em>Is this real?</em> &mdash; meaning, does the problem exist outside my own restless brain. <em>Is this me?</em> &mdash; meaning, am I the right person to build it, or am I borrowing someone else&rsquo;s ambition. <em>Is this now?</em> &mdash; meaning, is this the moment, or am I escaping a different project I should still be inside. A brief, almost stoic essay that arrives like a tap on the shoulder.</p>
+    </div>
+    <div class="foot"><span>135 points &middot; 21 comments</span><a href="https://jordanlord.co.uk/blog/3-constraints/">jordanlord.co.uk</a></div>
+  </div>
+</section>
+
+<!-- ═══════ 06 — SKY / WIDE ═══════ -->
+<section class="spread s06">
+  <div class="inner">
+    <div class="row">
+      <div class="kicker">06 &middot; Privacy &middot; Worth Reading</div>
+      <div class="rank">06</div>
+    </div>
+    <h2 class="headline">When your digital life vanishes &mdash; and it&rsquo;s nobody&rsquo;s job to notice.</h2>
+    <div class="body">
+      <p>A long New Yorker essay about what actually happens when a platform dies, an account gets locked, or a hard drive fails &mdash; and how thin the layer of &ldquo;ours&rdquo; really is in the cloud. The piece treats data loss as the default state of digital life rather than the exception, which is the right way around. You don&rsquo;t notice your photos quietly missing from the cloud because nobody, no system, no algorithm, has been assigned to notice on your behalf.</p>
+      <p>The writing is patient and bleak in the proper New Yorker register. The reporting is sharper than the genre usually gets &mdash; specific platforms, specific failures, specific people whose decade of correspondence is now a dark rectangle on a server somewhere. It pairs uncomfortably well with the Backblaze story we ran two weeks back.</p>
+    </div>
+    <div class="pull">Data loss is the default state of digital life. The exception is the part you remember to back up.</div>
+    <div class="foot" style="margin-top: 36px;"><span>42 points &middot; 12 comments</span><a href="https://www.newyorker.com/magazine/2026/04/27/when-your-digital-life-vanishes">newyorker.com</a></div>
+  </div>
+</section>
+
+<!-- ═══════ 07 — ACADEMIC ═══════ -->
+<section class="spread s07">
+  <div class="inner">
+    <div class="header-line">
+      <div class="rank">VII</div>
+      <div class="kicker">AI Research &middot; A Benchmark Retires</div>
+    </div>
+    <h2 class="headline">SWE-bench Verified is no longer measuring the frontier.</h2>
+    <div class="body">
+      <p class="drop">OpenAI announced today that it will stop reporting SWE-bench Verified scores in its model evaluations, on the grounds that the benchmark no longer differentiates between frontier models. A graceful retirement; also a quiet admission that the leaderboards we&rsquo;ve been arguing over for the better part of two years now sit at the saturation ceiling. When the gap between models is smaller than the noise in the test, the test is finished.</p>
+      <p>The interesting question is what comes next as a measure of &ldquo;real coding work.&rdquo; The post is careful not to nominate a successor &mdash; arguably because none of the candidates are obviously ready &mdash; and the 277 upvotes suggest the field knows it. Benchmarks die quietly. The thing that replaces them is usually controversial for a year before everyone agrees it was the right call.</p>
+    </div>
+    <div class="foot"><span>277 points &middot; 156 comments</span><a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/">openai.com</a></div>
+  </div>
+</section>
+
+<!-- ═══════ 08 — SAGE / PLAYFUL ═══════ -->
+<section class="spread s08">
+  <div class="inner">
+    <div class="kicker" style="margin-bottom: 24px;">Culture &middot; Pure Delight</div>
+    <div class="grid">
+      <div class="rank">08</div>
+      <div>
+        <h2 class="headline">Magic: The Gathering took him from N2 to Japanese fluency.</h2>
+        <div class="body" style="margin-top: 32px;">
+          <p>A developer hits the dreaded JLPT N2 plateau &mdash; the ceiling where your textbook starts to fail you and the language stops feeling closer the harder you study. He picks up Japanese-language Magic: The Gathering, plays it badly for several months, and emerges fluent on the other side. The post is a love letter to the principle that fluency is acquired, not studied; and that the acquisition usually requires something you actually want to do in the language.</p>
+          <p>The mechanism is the most interesting part. He didn&rsquo;t learn vocabulary lists. He learned card text, then strategy text, then the casual shop-talk you have with the person across the table when you&rsquo;re both pretending you don&rsquo;t care if you win.</p>
+        </div>
+        <div class="foot" style="margin-top: 32px;"><span>116 points &middot; 43 comments</span><a href="https://www.tokyodev.com/articles/how-magic-the-gathering-took-me-from-n2-to-japanese-fluency">tokyodev.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 09 — TERMINAL / DEV ═══════ -->
+<section class="spread s09">
+  <div class="inner">
+    <div class="prompt"><span class="caret">~/code</span> $ claude --watch tests/ &mdash;&mdash; the loop closes</div>
+    <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 14px;">
+      <div class="kicker">Directly For You &middot; Claude Code</div>
+      <div class="rank">09</div>
+    </div>
+    <h2 class="headline">EvanFlow: a TDD feedback loop for <code>claude code</code>.</h2>
+    <div class="body">
+      <p>A new open-source tool that wraps Claude Code in a strict test-driven feedback loop: write the failing test first, let the agent iterate, only ship the diff when the suite turns green. Small project, sharp idea &mdash; the kind of tool that gets adopted quickly because it doesn&rsquo;t require you to change anything else about your workflow. You bring your tests; <code>EvanFlow</code> brings the discipline.</p>
+      <p>The repo is barely a week old and already has people in the comments describing it as the missing scaffolding. The shape of it suggests we are entering the era where the interesting Claude Code tooling isn&rsquo;t IDE plugins or fancy dashboards &mdash; it&rsquo;s the small, sharp wrappers that turn the agent into a different kind of collaborator depending on the loop you put around it.</p>
+    </div>
+    <div class="callout"><b>Applies to you</b>You already write skills, hooks, and routines around Claude Code. <code>EvanFlow</code> is one extra primitive in the same direction. Star the repo, watch where it goes for a week, and decide whether to fold it into your daily loop. The whole thing is a single afternoon to try.</div>
+    <div class="foot on-dark"><span>45 points &middot; 17 comments</span><a href="https://github.com/evanklem/evanflow">github.com/evanklem</a></div>
+  </div>
+</section>
+
+<!-- ═══════ 10 — STAT FINISH ═══════ -->
+<section class="spread s10">
+  <div class="inner">
+    <div class="header-line">
+      <div class="kicker">Closing Note &middot; Security Archaeology</div>
+      <div class="rank">10</div>
+    </div>
+    <h2 class="headline">Software sabotage, five years before Stuxnet.</h2>
+    <div class="stat">5 yrs</div>
+    <div class="stat-label">Earlier than Stuxnet &middot; SentinelOne piecing together &ldquo;Fast16&rdquo;</div>
+    <div class="body">
+      <p>SentinelOne researchers, working backwards from a cryptic reference inside the old Shadow Brokers leak, have identified what looks like a precision software-sabotage operation predating Stuxnet by half a decade. The historical record on state-level cyberweapons keeps getting older, more deliberate, and more sophisticated than the public timeline ever quite admitted. We thought Stuxnet was the beginning. It now looks more like the moment the public found out.</p>
+      <p>The piece is patient, careful, and avoids the breathless register the genre attracts. 205 upvotes and 47 comments &mdash; the right size of attention for an essay that&rsquo;s mostly about how much we don&rsquo;t know about what was already happening.</p>
+    </div>
+    <div class="foot" style="margin-top: 32px;"><span>205 points &middot; 47 comments</span><a href="https://www.sentinelone.com/labs/fast16-mystery-shadowbrokers-reference-reveals-high-precision-software-sabotage-5-years-before-stuxnet/">sentinelone.com</a></div>
+  </div>
+</section>
+
+<!-- ═══════ COLOPHON ═══════ -->
+<footer class="colophon">
+  <div class="end">&sect; &nbsp; &sect; &nbsp; &sect;</div>
+  <p>Curated from the Hacker News front page on Monday, April 27, 2026. Politics, sports scores, culture wars, and industry gossip deliberately excluded. Tomorrow we&rsquo;ll see whether anyone has answered today&rsquo;s most important question: what does the agent actually have permission to delete?</p>
+</footer>
+
+</body>
+</html>
